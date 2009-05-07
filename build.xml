@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<project name="restair" default="run">
+	<property name="classes" location="./bin"/>
+	<property name="src" location="./src"/>
+	<property name="test" location="./test"/>
+	<property name="C" location="/media/C"/>
+	<property name="D" location="/media/D"/>
+	<path id="restair.lib">
+		<pathelement location="${C}/pgms/restlet-1.0.5/lib/org.restlet.jar"/>
+		<pathelement location="${C}/pgms/restlet-1.0.5/lib/com.noelios.restlet.jar"/>
+	<pathelement location="${C}/pgms/restlet-1.0.5/lib/org.simpleframework_3.1\org.simpleframework.jar"/>
+		<pathelement location="${C}/pgms/restlet-1.0.5/lib/com.noelios.restlet.ext.simple_3.1.jar"/>
+		<pathelement location="${C}/pgms/restlet-1.0.5/lib/com.noelios.restlet.ext.net.jar"/>
+		<pathelement location="${C}/pgms/restlet-1.0.5/lib/com.noelios.restlet.ext.httpclient_3.1.jar"/>
+		<pathelement location="${C}/pgms/restlet-1.0.5/lib/org.apache.commons.httpclient_3.1/org.apache.commons.httpclient.jar"/>
+		<pathelement location="${D}/0stuff/db4o/objectmanager-6.1/lib/db4o-6.1-java5.jar"/>
+		<pathelement location="${D}/0stuff/db4o/objectmanager-6.1/lib/db4o-sql.jar"/>
+		<pathelement location="${D}/0stuff/xstream/xstream-1.2.2.jar"/>
+		<pathelement location="${D}/0stuff/junit4.3.1/junit-4.3.1.jar"/>
+	</path>
+	
+	<path id="restair.all">
+		<path refid="restair.lib"/>
+		<pathelement path="${classes}"/>
+	</path>
+	
+	<target name="run" depends="compile">
+		<parallel>
+        <java classname="restair.restlet.Application" classpathref="restair.all" fork="true" jvm="/usr/bin/java">
+					<jvmarg value="-Duser.home=/media/C/Documents\ and\ Settings/srinaray/"/>
+<jvmarg value="-Xdebug"/>
+					<jvmarg value="-Xnoagent"/>
+        	<jvmarg value="-Xrunjdwp:transport=dt_socket,address=5000,server=y,suspend=n"/>
+        </java>
+		</parallel>
+    </target>
+
+    <target name="compile" depends="clean">
+    	<javac classpathref="restair.lib" debug="true" destdir="${classes}" listfiles="true">
+    		<src path="${src}"/>
+    		<src path="${test}"/>
+    	</javac>
+    </target>
+
+
+	<target name="clean">
+		<delete dir="${classes}" quiet="true"/>
+		<mkdir dir="${classes}"/>
+    </target>
+
+</project>

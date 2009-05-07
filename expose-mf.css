@@ -1,0 +1,71 @@
+/* Highlight Microformats v0.2 */
+/* ------------------------------------------------------- */
+
+
+.flightBooking,
+.traveller,	
+.flight {
+	border: 2px solid #e0e7b8 !important;
+	padding: 25px 3px 3px 3px !important;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin: 5px 0 !important;
+}
+
+span.bookingReference,
+span.bookingStatus,
+span.flightNumber,
+span.capacity, 
+span.seatsTaken {
+	padding: 2px 1px 2px 70px !important;
+	margin: 0 2px 0 !important;
+}
+/*
+span.seatsTaken:before{
+	content: "Seats Taken: "
+}
+ 
+span.capacity:before{
+	content: "Flight capacity: "
+}
+span.capacity:after{
+	content: " seats"
+}*/
+
+/*No need to specify manually like above*/
+span:before{
+	content: attr(class);
+	text-transform: capitalize;
+	margin-right: 1em;
+	margin-left: 2em;
+	border: thin dotted; padding: 0.1em;
+	background-color: yellow;
+} 
+
+
+/*should number each traveller - works in opera*/
+div.traveller:before {
+	content: counter(trvlr);
+	counter-increment: trvlr 1
+}
+
+
+/* images have to be saved as data URIs as usercontent doesn't support local images */
+
+.flight {
+	background:#f8f8ec url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAAD///+l2Z/dAAAAM0lEQVR4nGP4/5/h/1+G/58ZDrAz3D/McH8yw83NDDeNGe4Ug9C9zwz3gVLMDA/A6P9/AFGGFyjOXZtQAAAAAElFTkSuQmCC") 5px 2px no-repeat  !important;
+}
+
+
+.flightBooking {
+	background:#f8f8ec url("data:image/gif,GIF89a2%00%10%00%E6%00%00%00%00%00%DF%E0%E2%B4soz%A6%22h%9B%06%C1%C3%C5%CB%DB%A4%8C%8C%8CKKL%B5%B6%B7%8D%60%5DRG%3A%3E%3E%3E%9E%BE%5C%F0%8C%8E%DB%DB%D1%B0%C9y%F2%F3%F4333%B9%CF%87%8C%B2%3F%F8%F8%ECfff%E6%EC%CF%FF%FF%FF%84~r%AF%AF%A9%DD%E6%C1%D7%D7%CE%BAzvi_M%C2%D5%95%A7np%E9%E9%DE%D4%E1%B2%60VF%EA%EB%ECWL%3Ep%A0%14%C5%CE%CE%83%AC0%A0%9A%8A%A7%C3j%D9%DB%DD%C7_a%5B%5C%5C%F2%91%93%CA%CA%C2%F5%F6%F7%95%B8M%99%99%99%EF%F2%DE%C2y%7B%9DZW%DB%DC%DD%3B%3B%3C%EF%F0%F0%D5%D6%D8%CF%D1%D3%B7%BA%BCdZJ%E6%E7%E7%5BQB%C1%81~%BDjl%F7%94%94kaO%C2%C5%C7%DE%DE%D6%BF%7F%7B%A7pq%CC%CC%CC%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00!%F9%04%00%07%00%FF%00%2C%00%00%00%002%00%10%00%00%07%FF%80%15%82%15%2F%1A%2F%83%84%86%88%8B%8C%8D%8E%8F%15%16%18%16%88%92%94%90%98%99%88)5%96EE%1D%02%96B)%9A%A6%8F%1E%2C%96%0EA.%0E%96%1E%1E%A7%B3%8B%3C%2C%40%204%AC%AE4F%0A%3C%3C%8B%17%22%C4%223%B4%8E%3C8%11%CC%CD%CE%24%C1%88%10%04%D4%04%22%C8%82%06%17%83%238%18%DF%E0%E1%3D%23%8B%D3%D8%88%22%D6%DC%24%DF2%0C%18%0C%00%00%EF%01%E4%D2%04%833%04*%82%FB%15%13%26LL%A8%90%EE%83%89%01%1B*T%A3%20hD%0F%18%07%240%80A%91%C1%11%186%EC%0D%9AF%A1c%85%18%03*%18%20p%C1%80%89%0D%E9%88%11%A0%20b%00%8A%7F%04%26%24%AC%E0%23%00%8C%1E%3B%26%C2%90%D1%82b%0E%1F%E5%08%40%18*%92%C0%86%06%2Fc%98%E8(4e%05sN%05%F9X%C1%2C%C1%0Df%08%120%D3%01%F4%DE%22%13%10L%7C%F88%60(%04%95%D7%A0%AA%13T%22%07%0E%1CV%5E%DF%02x%8B%E3H%89%A0%C5%B6%A90A%E0%D8%87%98%22%06%3A5%B7A%E8%B6%0A%25t%90X%CC%B8q%81%BB%F7%AAA%A8P%B8%C1%A0%09%03%08%A0%981%18_%05%15B%05-%18%B2%A2%B4%E9%D3%3B%16%9C3%15%E2A%86%05%B0c%CB%86%9D!%C4%EAL%AD%1Fp%D8%CD%BB%F7%EE%07%B6oC%0A%04%00%3B") 5px 2px no-repeat  !important;
+}
+
+
+/* XFN */
+
+a.n:hover:after, a.fn:hover:after {
+   content: " (" attr(rel) ") ";
+   color: #636958;
+   padding-left: 0.3em;
+ }

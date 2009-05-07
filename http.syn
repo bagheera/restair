@@ -1,0 +1,95 @@
+C=1
+
+[Syntax]
+Namespace1 = 6
+IgnoreCase = No
+KeyWordLength =
+BracketChars = 
+OperatorChars = 
+PreprocStart = P
+SyntaxStart =
+SyntaxEnd =
+CommentStart = <body
+CommentEnd = </body>
+CommentStartAlt =
+CommentEndAlt =
+SingleComment = 
+SingleCommentCol =
+SingleCommentAlt =
+SingleCommentColAlt =
+StringsSpanLines = No
+
+
+; Http verbs and 
+[Keywords 1]
+GET
+PUT
+DELETE
+POST
+OPTIONS
+HEAD
+Send
+
+; headers
+[Keywords 2]
+Accept:
+Content-Type:
+Content-Length:
+Location:
+
+; success codes
+[Keywords 3]
+_200
+_201
+_202
+_203
+_204
+_205
+_206
+_207
+
+; Redirection
+[Keywords 4]
+_300
+_301
+_302
+_303
+_304
+_305
+_306
+_307
+
+; Other
+[Keywords 5]
+Recv
+
+; Clinet or server side error
+[Keywords 6]
+_400
+_401
+_402
+_403
+_404
+_405
+_406
+_407
+_408
+_409
+_410
+_411
+_412
+_413
+_414
+_415
+_416
+_417
+_500
+_501
+_502
+_503
+_504
+_505
+
+; preproc
+[Preprocessor keywords]
+.\curl

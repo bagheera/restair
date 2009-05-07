@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="src" path="src" />
+    <classpathentry kind="src" path="test" />
+    <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" />
+    <classpathentry sourcepath="C:/pgms/restlet-1.0.5/src/com.noelios.restlet.ext.httpclient_3.1" kind="lib" path="C:/pgms/restlet-1.0.5/lib/com.noelios.restlet.ext.httpclient_3.1.jar" />
+    <classpathentry sourcepath="C:/pgms/restlet-1.0.5/src/com.noelios.restlet" kind="lib" path="C:/pgms/restlet-1.0.5/lib/com.noelios.restlet.jar" />
+    <classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4" />
+    <classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/db4o" />
+    <classpathentry sourcepath="D:/0stuff/xstream/src/xstream-1.2.2/xstream/src/java" kind="lib" path="D:/0stuff/xstream/xstream-1.2.2.jar" />
+    <classpathentry sourcepath="C:/pgms/restlet-1.0.5/src/org.restlet" kind="lib" path="C:/pgms/restlet-1.0.5/lib/org.restlet.jar" />
+    <classpathentry kind="lib" path="C:/pgms/restlet-1.0.5/lib/org.apache.commons.httpclient_3.1/org.apache.commons.httpclient.jar" />
+    <classpathentry kind="lib" path="C:/pgms/restlet-1.0.5/lib/org.apache.commons.logging_1.1/org.apache.commons.logging.jar" />
+    <classpathentry kind="lib" path="C:/pgms/restlet-1.0.5/lib/org.apache.commons.codec_1.3/org.apache.commons.codec.jar" />
+    <classpathentry kind="output" path="bin" />
+</classpath>
+

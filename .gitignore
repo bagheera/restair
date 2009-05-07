@@ -1,0 +1,6 @@
+*.class
+*.out
+*.log
+.svn
+bin
+sample
